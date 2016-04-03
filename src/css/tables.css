@@ -6,7 +6,7 @@ table {
 thead {
 	background: var(--bg-dark);
 
-	:--white-contrast & {
+	:--colored-dark & {
 		background: var(--bg-light);
 	}
 }
