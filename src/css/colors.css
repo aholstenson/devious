@@ -1,0 +1,44 @@
+@custom-selector :--colored
+	.fill-red-500, .fill-red-400, .fill-red-300,
+	.fill-purple-500, .fill-purple-400, .fill-purple-300,
+	.fill-grey-900, .fill-grey-500;
+
+@custom-selector :--white-contrast
+	.fill-red-500, .fill-red-400,
+	.fill-purple-500, .fill-purple-400,
+	.fill-grey-900;
+
+.fill-red, .fill-red-500 {
+	background-color: #f44336;
+	color: #fff;
+}
+
+.fill-red-400 {
+	background-color: #EF5350;
+	color: #fff;
+}
+
+.fill-red-300 {
+	background-color: #E57373;
+	color: #000;
+}
+
+.fill-purple-500 {
+	background-color: #9C27B0;
+	color: #fff;
+}
+
+.fill-purple-400 {
+	background-color: #ab47bc;
+	color: #fff;
+}
+
+.fill-grey-900 {
+	background-color: #212121;
+	color: #fff
+}
+
+.fill-grey-500 {
+	background-color: #9E9E9E;
+	color: #000;
+}

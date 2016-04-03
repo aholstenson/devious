@@ -1,0 +1,97 @@
+body {
+	font-family: var(--normal-font-family);
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+	font-family: var(--heading-font-family);
+	font-weight: 400;
+	font-style: inherit;
+}
+
+h1, .h1 {
+	font-size: var(--h1-font-size);
+	line-height: var(--line-height-x2);
+	margin-top: var(--line-height);
+	margin-bottom: 0rem;
+}
+h2, .h2 {
+	font-size: var(--h2-font-size);
+	line-height: var(--line-height-x2);
+	margin-top: var(--line-height);
+	margin-bottom: 0rem;
+}
+h3, .h3 {
+	font-size: var(--h3-font-size);
+	line-height: var(--line-height);
+	margin-top: var(--line-height);
+	margin-bottom: 0rem;
+}
+h4, .h4 {
+	font-size: var(--h4-font-size);
+	line-height: var(--line-height);
+	margin-top: var(--line-height);
+	margin-bottom: 0rem;
+}
+h5, .h5 {
+	font-weight: 400;
+	font-style: italic;
+	font-size: var(--h5-font-size);
+	line-height: var(--line-height);
+	margin-top: var(--line-height);
+	margin-bottom: 0rem;
+}
+p, ul, ol, pre, table, blockquote {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	&:not(:last-child) {
+		margin-top: 0rem;
+		margin-bottom: var(--line-height);
+	}
+}
+pre {
+	font-size: 14px;
+	background: #efefef;
+	padding: 0 var(--line-height-half);
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+hr {
+	border: 1px solid;
+	margin: -1px 0;
+}
+b, strong, em, small, code {
+	line-height: 1;
+}
+sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+html.\+show-grid {
+	background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+	background-position: left -1px;
+	background-repeat: repeat;
+	background-size: var(--line-height) var(--line-height);
+}
+
+details {
+	margin-top: 0;
+	margin-bottom: var(--line-height);
+
+	border-radius: 4px;
+	border: 2px solid #efefef;
+	padding: calc(var(--line-height) / 2 - 2px) var(--line-height-half)
+}

@@ -1,0 +1,65 @@
+/**
+ * Styles for the main header of an application.
+ */
+
+.navbar {
+	display: flex;
+	align-content: center;
+	z-index: 1000;
+
+	padding: 0 var(--line-height);
+
+	background: var(--header-bg);
+	color: var(--header-fg);
+
+	> :nth-child(n+2) {
+		margin-left: var(--line-height);
+	}
+
+	&__title {
+		font-family: var(--heading-font-family);
+		font-size: var(--h3-font-size);
+		line-height: var(--line-height-x2);
+
+		color: inherit;
+		text-decoration: none;
+	}
+
+	ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			display: inline;
+
+			&:nth-child(n+2) {
+				margin-left: 20px;
+			}
+
+			&[data-selected] > a {
+				color: var(--highlight-color);
+			}
+
+			> a {
+				display: block;
+				box-sizing: border-box;
+
+				text-decoration: none;
+
+				height: var(--line-height-x2);
+
+				color: var(--header-link-fg);
+				color: inherit;
+
+				line-height: var(--line-height-x2);
+
+				padding: 0;
+			}
+		}
+	}
+
+	&.\+solid {
+		background: #efefef;
+	}
+}

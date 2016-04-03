@@ -1,0 +1,26 @@
+<html>
+    <head>
+		<title>{{ title }} | Devious</title>
+		<link href="/css/main.css" rel="stylesheet">
+        <script src="/js/main.js"></script>
+    </head>
+    <body>
+		<ds-app class="+sticky-navbar">
+	        <nav class="navbar">
+	            <a class="navbar__title" href="/">Devious</a>
+	            <ul>
+	                <li data-selected="true">
+	                    <a href="/components.html">Components</a>
+	                </li>
+	                <li>
+	                    <a href="/layout.html">Layout</a>
+	                </li>
+	            </ul>
+	        </nav>
+			<main class="main" id="main" role="main">
+		        {% block main %}
+				{% endblock %}
+			</main>
+		</ds-app>
+    </body>
+</html>

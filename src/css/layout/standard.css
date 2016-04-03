@@ -1,0 +1,42 @@
+ds-app {
+	display: block;
+
+	> .main {
+		padding: 0 var(--line-height);
+	}
+
+	&.\+sticky-navbar {
+		padding-top: var(--line-height-x2);
+
+		> .navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+
+			background: #fff;
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+		}
+	}
+}
+
+ds-bar {
+	display: block;
+
+	line-height: var(--line-height-x2);
+
+	&:--colored {
+		padding-left: var(--line-height-half);
+		padding-right: var(--line-height-half);
+	}
+}
+
+ds-area {
+	display: block;
+	
+	margin-top: var(--line-height);
+
+	&:--colored {
+		padding: var(--line-height-half);
+	}
+}

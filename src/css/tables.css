@@ -1,0 +1,25 @@
+table {
+	width: 100%;
+	color: inherit;
+}
+
+thead {
+	background: var(--bg-dark);
+
+	:--white-contrast & {
+		background: var(--bg-light);
+	}
+}
+
+th, td {
+	padding: 0 var(--line-height-half);
+
+	text-align: left;
+	line-height: var(--line-height-x2);
+}
+
+th {
+	font-family: var(--heading-font-family);
+	font-weight: 400;
+	font-style: inherit;
+}

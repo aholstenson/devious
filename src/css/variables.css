@@ -1,0 +1,51 @@
+:root {
+	--text-color: #2f363b;
+
+	--header-bg: transparent;
+	--header-fg: #2f363b;
+	--header-link-fg: #2f363b;
+	--header-border: #aaa;
+
+	--highlight-color: #268ED9;
+	--light-highlight-color: #fefefe;
+
+	--bg-dark: rgba(0, 0, 0, 0.1);
+	--bg-light: rgba(255, 255, 255, 0.1);
+
+	--border-dark: rgba(0, 0, 0, 0.25);
+	--border-darker: rgba(0, 0, 0, 0.5);
+	--border-light: rgba(255, 255, 255, 0.25);
+	--border-lighter: rgba(255, 255, 255, 0.5);
+
+	/* Basic typography */
+	--line-height: 1.5625rem;
+	--line-height-x2: calc(var(--line-height) * 2);
+	--line-height-half: calc(var(--line-height) / 2);
+	--font-size: 1rem;
+
+	--normal-font-family: Roboto, Helvetica, Arial, sans-serif;
+	--heading-font-family: Montserrat, Helvetica, Arial, sans-serif;
+
+	--h1-font-size: 2.375rem;
+	--h2-font-size: 1.8125rem;
+	--h3-font-size: 1.3215rem;
+	--h4-font-size: 1rem;
+	--h5-font-size: 1rem;
+
+	/* Forms */
+	--input-bg: #fff;
+	--input-fg: #222;
+
+	--input-border-radius: 3px;
+	--input-border-normal: var(--border-dark);
+	--input-border-focus: var(--border-darker);
+	--input-border-required: var(--input-border-normal);
+	--input-border-invalid: #faa;
+
+	--input-background-invalid: #fee;
+	--input-addon-background: #fff;
+	--input-addon-color: #555;
+
+	--input-padding-vertical: 10px;
+	--input-padding-horizontal: 12px;
+}
