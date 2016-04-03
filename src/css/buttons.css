@@ -39,21 +39,21 @@ button, .button {
 	}
 
 	&.\+primary {
-		border-color: var(--highlight-color);
-		background: var(--highlight-color);
-		color: color(var(--highlight-color) contrast(0%));
+		border-color: var(--highlight-color-bg);
+		background: var(--highlight-color-bg);
+		color: var(--highlight-color-text);
 
 		&[data-selected] {
-			background: color(var(--highlight-color) shade(10%));
+			background: color(var(--highlight-color-bg) shade(10%));
 		}
 
-		:--white-contrast & {
-			border-color: var(--light-highlight-color);
-			background: var(--light-highlight-color);
-			color: color(var(--light-highlight-color) contrast(0%));
+		:--colored-dark & {
+			border-color: var(--light-highlight-color-bg);
+			background: var(--light-highlight-color-bg);
+			color: var(--light-highlight-color-text);
 
 			&[data-selected] {
-				background: color(var(--light-highlight-color) shade(10%));
+				background: color(var(--light-highlight-color-bg) shade(10%));
 			}
 		}
 

@@ -10,31 +10,32 @@ var colors = require('./colors.json');
 var allKeys = [];
 var darkKeys = [];
 
+function outputColor(name, color) {
+	color = cm(color);
+	var text = color.light() ? '#000' : '#fff';
+
+	allKeys.push(name);
+	if(color.dark()) {
+		darkKeys.push(name);
+	}
+
+	let style = name  + ' { background-color: ' + color.hexString() + '; color: ' + text + '; }';
+	console.log(style);
+}
+
 Object.keys(colors).forEach(function(c) {
-	if(typeof colors[c] != 'object') return;
-
-	Object.keys(colors[c]).forEach(function(v) {
-		var color = cm(colors[c][v]);
-		var text = color.light() ? '#000' : '#fff';
-
-		var selector = '.fill-' + c + '-' + v;
-		allKeys.push(selector);
-		if(color.dark()) {
-			darkKeys.push(selector);
-		}
-
-		if(v == '500') {
-			var s2 = '.fill-' + c;
-			selector += ', ' + s2;
-			allKeys.push(s2);
-			if(color.dark()) {
-				allKeys.push(s2);
+	if(typeof colors[c] != 'object') {
+		outputColor('.fill-' + c, colors[c]);
+	} else {
+		Object.keys(colors[c]).forEach(function(v) {
+			var selector = '.fill-' + c + '-' + v;
+			if(v == '500') {
+				selector += ', .fill-' + c;
 			}
-		}
 
-		let style = selector + ' { background-color: ' + color.hexString() + '; color: ' + text + '; }';
-		console.log(style);
-	});
+			outputColor(selector, colors[c][v]);
+		});
+	}
 });
 
 console.log('@custom-selector :--colored ' + allKeys.join(',') + ';');

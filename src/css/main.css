@@ -39,9 +39,10 @@
 @import "forms.css";
 @import "tables.css";
 
-@import "colors.css";
-
 @import "layout/standard.css";
 @import "layout/header.css";
 
 @import "layout/grid.css";
+
+/* Import colors last to give them a chance to override other styles */
+@import "colors.css";

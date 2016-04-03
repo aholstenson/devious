@@ -33,12 +33,14 @@
 		> li {
 			display: inline;
 
-			&:nth-child(n+2) {
-				margin-left: 20px;
-			}
-
 			&[data-selected] > a {
-				color: var(--highlight-color);
+				background: var(--highlight-color-bg);
+				color: var(--highlight-color--text);
+
+				:--colored-dark & {
+					background: var(--light-highlight-color-bg);
+					color: var(--light-highlight-color-text);
+				}
 			}
 
 			> a {
@@ -54,7 +56,17 @@
 
 				line-height: var(--line-height-x2);
 
-				padding: 0;
+				padding: 0 10px;
+
+				&:hover {
+					background: color(var(--highlight-color-bg) tint(10%));
+					color: var(--highlight-color--text);
+
+					:--colored-dark & {
+						background: color(var(--light-highlight-color-bg) tint(10%));
+						color: var(--light-highlight-color-text);
+					}
+				}
 			}
 		}
 	}
