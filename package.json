@@ -4,9 +4,13 @@
   "description": "CSS and JS for lazy webapps.",
   "license": "MIT",
   "devDependencies": {
-    "brygga": "^0.2.0",
+    "brygga": "^0.3.0",
+    "brygga-jspm": "^0.2.0",
+    "brygga-nunjucks": "^0.2.0",
     "gulp": "^3.9.1",
-    "jspm": "^0.17.0-beta.9",
+    "jspm": "^0.17.0-beta.9"
+  },
+  "dependencies": {
     "normalize.css": "^3.0.3"
   },
   "jspm": {
@@ -15,8 +19,7 @@
       "lib": "src/js"
     },
     "dependencies": {
-      "ally": "npm:ally@^0.2.13",
-      "src": "local:src@master"
+      "ally": "npm:ally@^0.2.13"
     },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.6"
