@@ -1,8 +1,9 @@
 ds-app {
 	display: block;
 
-	> .main {
-		padding: 0 var(--line-height);
+	.main > ds-area {
+		margin-top: 0;
+		padding: var(--line-height);
 	}
 
 	&.\+sticky-navbar {
@@ -41,5 +42,11 @@ ds-area {
 
 	&:--colored {
 		padding: var(--line-height-half);
+	}
+
+	> h1, > h2, > h3, > h4, > h5 {
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 }
