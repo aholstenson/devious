@@ -19,6 +19,8 @@
 
 				border-bottom: 3px solid transparent;
 
+				transition: border-color 150ms ease-in;
+
 				&:hover {
 					border-color: #888;
 				}

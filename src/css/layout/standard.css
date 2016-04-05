@@ -2,7 +2,7 @@ ds-app {
 	display: block;
 
 	.main > ds-area {
-		margin-top: 0;
+		margin: 0;
 		padding: var(--line-height);
 	}
 
@@ -39,9 +39,13 @@ ds-area {
 	display: block;
 
 	margin-top: var(--line-height);
+	margin-left: -var(--line-height-half);
+	margin-right: -var(--line-height-half);
+	padding: 0 var(--line-height-half);
 
 	&:--colored {
-		padding: var(--line-height-half);
+		padding-top: var(--line-height-half);
+		padding-bottom: var(--line-height-half);
 	}
 
 	> h1, > h2, > h3, > h4, > h5 {

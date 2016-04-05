@@ -2,10 +2,5 @@
 <div class="pattern">
 	<h3 class="h4">{{ title }}</h3>
 	{{ caller() }}
-
-	<details>
-		<summary>Source</summary>
-		<pre>{{ caller() | escape | safe }}</pre>
-	</details>
 </div>
 {% endmacro %}

@@ -33,40 +33,29 @@
 		> li {
 			display: inline;
 
-			&[data-selected] > a {
-				background: var(--highlight-color-bg);
-				color: var(--highlight-color--text);
-
-				:--colored-dark & {
-					background: var(--light-highlight-color-bg);
-					color: var(--light-highlight-color-text);
-				}
-			}
-
 			> a {
 				display: block;
 				box-sizing: border-box;
 
 				text-decoration: none;
 
-				height: var(--line-height-x2);
-
 				color: var(--header-link-fg);
 				color: inherit;
 
-				line-height: var(--line-height-x2);
+				border-bottom: 3px solid transparent;
+				transition: border-color 150ms ease-in;
+
+				line-height: calc(var(--line-height-x2) - 3px);
 
 				padding: 0 10px;
 
 				&:hover {
-					background: color(var(--highlight-color-bg) tint(10%));
-					color: var(--highlight-color--text);
-
-					:--colored-dark & {
-						background: color(var(--light-highlight-color-bg) tint(10%));
-						color: var(--light-highlight-color-text);
-					}
+					border-color: #888;
 				}
+			}
+
+			&[data-selected] > a {
+				border-color: #444;
 			}
 		}
 	}

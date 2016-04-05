@@ -14,7 +14,7 @@ button, .button {
 	border-radius: 4px;
 
 	&:not([disabled]):hover {
-		border-color: var(--highlight-color);
+		border-color: var(--highlight-color-bg);
 	}
 
 	&[disabled] {
@@ -34,7 +34,7 @@ button, .button {
 		}
 
 		&:not([disabled]):hover {
-			border-color: var(--light-highlight-color);
+			border-color: var(--light-highlight-color-bg);
 		}
 	}
 
