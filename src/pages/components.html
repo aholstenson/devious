@@ -2,116 +2,88 @@
 title: Cookie
 ---
 {% extends "layouts/page.html" %}
+{% set section = 'components' %}
 
-{% macro pattern(title) %}
-<div class="pattern">
-	<h3 class="h4">{{ title }}</h3>
-	{{ caller() }}
-
-	<details>
-		<summary>Source</summary>
-		<pre>{{ caller() | escape | safe }}</pre>
-	</details>
-</div>
-{% endmacro%}
+{% import 'utils.nunjucks' as utils %}
 
 {% block main %}
-<h1>Components</h1>
+<ds-area class="fill-green-600">
+	<h1>Components</h1>
+</ds-area>
 
-<h2>Buttons</h2>
+<ds-area>
 
-{% call pattern("Standard") -%}
-<ds-bar>
-	<button>Normal</button>
-	<button class="+primary">+primary</button>
-	<a href="#" class="button">Normal (link)</a>
-	<a href="#" class="button +primary">+primary (link)</a>
-</ds-bar>
-{%- endcall %}
+	<h2>Buttons</h2>
 
-{% call pattern("Disabled") -%}
-<ds-bar>
-	<button disabled>Normal (disabled)</button>
-	<button disabled class="+primary">Primary (disabled)</button>
-</ds-bar>
-{%- endcall %}
+	{% call utils.pattern("Standard") -%}
+	<ds-bar>
+		<button>Normal</button>
+		<button class="+primary">+primary</button>
+		<a href="#" class="button">Normal (link)</a>
+		<a href="#" class="button +primary">+primary (link)</a>
+	</ds-bar>
+	{%- endcall %}
 
-{% call pattern("Colored area") -%}
-<ds-bar class="fill-purple-500">
-	<button>Normal</button>
-	<button class="+primary">+primary</button>
-	<a href="#" class="button">Normal (link)</a>
-	<a href="#" class="button +primary">+primary (link)</a>
-</ds-bar>
-{%- endcall %}
+	{% call utils.pattern("Disabled") -%}
+	<ds-bar>
+		<button disabled>Normal (disabled)</button>
+		<button disabled class="+primary">Primary (disabled)</button>
+	</ds-bar>
+	{%- endcall %}
 
-{% call pattern("Groups") -%}
-<ds-bar>
-	<span class="button-group">
-		<button>1</button>
-		<button>2</button>
-		<button data-selected>3</button>
-	</span>
-</ds-bar>
-{%- endcall %}
+	{% call utils.pattern("Colored area") -%}
+	<ds-bar class="fill-purple-500">
+		<button>Normal</button>
+		<button class="+primary">+primary</button>
+		<a href="#" class="button">Normal (link)</a>
+		<a href="#" class="button +primary">+primary (link)</a>
+	</ds-bar>
+	{%- endcall %}
 
-<h2>Forms</h2>
+	{% call utils.pattern("Groups") -%}
+	<ds-bar>
+		<span class="button-group">
+			<button>1</button>
+			<button>2</button>
+			<button data-selected>3</button>
+		</span>
+	</ds-bar>
+	{%- endcall %}
 
-{% call pattern("<ds-form-control>") -%}
-<form>
-	<ds-form-control>
-		<label for="input-1">Name</label>
-		<input type="text" value="" placeholder="Name should go here" id="input-1">
-	</ds-form-control>
-</form>
-{%- endcall %}
+	<h2>Forms</h2>
 
-{% call pattern("Grid layout") -%}
-<form>
-	<ds-form-control>
-		<label for="input-1">Name</label>
-		<input type="text" value="" placeholder="Name should go here" id="input-1">
-	</ds-form-control>
+	{% call utils.pattern("<ds-form-control>") -%}
+	<form>
+		<ds-form-control>
+			<label for="input-1">Name</label>
+			<input type="text" value="" placeholder="Name should go here" id="input-1">
+		</ds-form-control>
+	</form>
+	{%- endcall %}
 
-	<div class="grid">
-		<ds-form-control data-grid-size="1of2 m-full">
+	{% call utils.pattern("Grid layout") -%}
+	<form>
+		<ds-form-control>
 			<label for="input-1">Name</label>
 			<input type="text" value="" placeholder="Name should go here" id="input-1">
 		</ds-form-control>
 
-		<ds-form-control data-grid-size="1of2">
-			<label for="input-1">Name</label>
-			<input type="text" value="" placeholder="Name should go here" id="input-1">
-		</ds-form-control>
-	</div>
-</form>
-{%- endcall %}
+		<div class="grid">
+			<ds-form-control data-grid-size="1of2 m-full">
+				<label for="input-1">Name</label>
+				<input type="date" value="" placeholder="Name should go here" id="input-1">
+			</ds-form-control>
 
-<h2>Tables</h2>
+			<ds-form-control data-grid-size="1of2">
+				<label for="input-1">Name</label>
+				<input type="password" value="" placeholder="Name should go here" id="input-1">
+			</ds-form-control>
+		</div>
+	</form>
+	{%- endcall %}
 
-<table>
-	<thead>
-		<tr>
-			<th scope="col">Title</th>
-			<th scope="col">Author</th>
-			<th scope="col">Release date</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos</td>
-			<td>Seth Loyd</td>
-			<td>2006, March 14th</td>
-		</tr>
-		<tr>
-			<td>The World According to Anna</td>
-			<td>Jostein Gaarder</td>
-			<td>2015, November 12th</td>
-		</tr>
-	</tbody>
-</table>
+	<h2>Tables</h2>
 
-<ds-area class="fill-grey-900">
 	<table>
 		<thead>
 			<tr>
@@ -133,48 +105,87 @@ title: Cookie
 			</tr>
 		</tbody>
 	</table>
+
+	<ds-area class="fill-grey-900">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Title</th>
+					<th scope="col">Author</th>
+					<th scope="col">Release date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos</td>
+					<td>Seth Loyd</td>
+					<td>2006, March 14th</td>
+				</tr>
+				<tr>
+					<td>The World According to Anna</td>
+					<td>Jostein Gaarder</td>
+					<td>2015, November 12th</td>
+				</tr>
+			</tbody>
+		</table>
+	</ds-area>
+
+	<h2>Navigation</h2>
+
+	{% call utils.pattern("Tabs") -%}
+	<nav class="tabs">
+		<ul>
+			<li data-selected><a href="#">Tab 1</a></li>
+			<li><a href="#">Tab 2</a></li>
+		</ul>
+	</nav>
+	{%- endcall %}
+
+	{% call utils.pattern("Breadcrumbs") -%}
+		<ul class="breadcrumbs">
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+		</ul>
+	{%- endcall %}
+
+	{% call utils.pattern("Breadcrumbs") -%}
+		<ds-area class="fill-grey-900">
+			<ul class="breadcrumbs +floating-above">
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+			</ul>
+			<h1>Title</h1>
+		</ds-area>
+	{%- endcall %}
+
+	{% call utils.pattern("Navbar") -%}
+	<nav class="navbar">
+		<a class="navbar__title" href="#">Title</a>
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li data-selected><a href="#">Link 2</a></li>
+		</ul>
+	</nav>
+	{%- endcall %}
+
+	<h2>Utilities</h2>
+
+	{% call utils.pattern("<ds-bar>") %}
+	<ds-bar>
+		<button>Hi!</button> For toolbars or any button bar.
+	</ds-bar>
+	{% endcall %}
+
+	{% call utils.pattern("<ds-area>") %}
+	<ds-area>
+		If you need a bit of spacing at top.
+	</ds-area>
+	{% endcall %}
+
+	{% call utils.pattern("<ds-area class=\"fill-red-300\">") %}
+	<ds-area class="fill-red-300">
+		Or want to color something.
+	</ds-area>
+	{% endcall %}
 </ds-area>
-
-<h2>Navbar</h2>
-
-{% call pattern("Standard") -%}
-<nav class="navbar">
-	<a class="navbar__title" href="#">Title</a>
-	<ul>
-		<li><a href="#">Link 1</a></li>
-		<li data-selected><a href="#">Link 2</a></li>
-	</ul>
-</nav>
-{%- endcall %}
-
-{% call pattern("+solid") %}
-<nav class="navbar +solid">
-	<a class="navbar__title" href="#">Title</a>
-	<ul>
-		<li><a href="#">Link 1</a></li>
-		<li data-selected><a href="#">Link 2</a></li>
-	</ul>
-</nav>
-{%- endcall %}
-
-<h2>Utilities</h2>
-
-{% call pattern("<ds-bar>") %}
-<ds-bar>
-	<button>Hi!</button> For toolbars or any button bar.
-</ds-bar>
-{% endcall %}
-
-{% call pattern("<ds-area>") %}
-<ds-area>
-	If you need a bit of spacing at top.
-</ds-area>
-{% endcall %}
-
-{% call pattern("<ds-area class=\"fill-red-300\">") %}
-<ds-area class="fill-red-300">
-	Or want to color something.
-</ds-area>
-{% endcall %}
-
 {% endblock %}

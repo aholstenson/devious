@@ -1,0 +1,32 @@
+.tabs {
+	margin-bottom: var(--line-height);
+
+	> ul {
+		padding: 0;
+		list-style: none;
+
+		> li {
+			display: inline-block;
+
+			> a {
+				display: inline-block;
+				padding: 0 var(--line-height-half);
+
+				font-size: 1.24em;
+
+				text-decoration: none;
+				line-height: calc(var(--line-height-x2) - 3px);
+
+				border-bottom: 3px solid transparent;
+
+				&:hover {
+					border-color: #888;
+				}
+			}
+
+			&[data-selected] > a {
+				border-color: #444;
+			}
+		}
+	}
+}

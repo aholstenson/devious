@@ -57,3 +57,7 @@ ds-form-control {
 		color: var(--input-fg);
 	}
 }
+
+input::-webkit-datetime-edit-fields-wrapper {
+	padding: 0;
+}

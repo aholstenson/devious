@@ -1,6 +1,7 @@
 table {
 	width: 100%;
 	color: inherit;
+	border-collapse: collapse;
 }
 
 thead {
