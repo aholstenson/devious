@@ -95,3 +95,11 @@ details {
 	border: 2px solid #efefef;
 	padding: calc(var(--line-height) / 2 - 2px) var(--line-height-half)
 }
+
+a {
+	color: #000;
+
+	:--colored-dark & {
+		color: #fff;
+	}
+}
