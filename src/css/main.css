@@ -40,6 +40,8 @@
 @import "forms.css";
 @import "tables.css";
 
+@import "breadcrumbs.css";
+
 @import "layout/standard.css";
 @import "layout/header.css";
 
