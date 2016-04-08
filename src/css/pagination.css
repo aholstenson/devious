@@ -1,0 +1,20 @@
+.pagination {
+	display: inline-flex;
+
+	border-radius: 3px;
+	border: 2px solid #ccc;
+
+	line-height: calc(var(--line-height) * 1.5 - 3px);
+
+	&__current {
+		font-weight: bold;
+	}
+
+	&__divider:after {
+		content: '…';
+	}
+
+	> a, > span {
+		padding: 0 var(--line-height-half);
+	}
+}

@@ -42,6 +42,7 @@
 
 @import "breadcrumbs.css";
 @import "tabs.css";
+@import "pagination.css";
 
 @import "layout/standard.css";
 @import "layout/header.css";
