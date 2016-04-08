@@ -58,6 +58,13 @@ ds-form-control {
 	}
 }
 
+textarea {
+	line-height: var(--line-height);
+
+	padding-top: calc(var(--line-height-half) / 2);
+	padding-bottom: calc(var(--line-height-half) / 2);
+}
+
 input::-webkit-datetime-edit-fields-wrapper {
 	padding: 0;
 }
