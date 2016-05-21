@@ -1,6 +1,8 @@
 .grid {
 	display: flex;
 
+	flex-wrap: wrap;
+
 	margin-left: -calc(var(--line-height-half) / 2);
 	margin-right: -calc(var(--line-height-half) / 2);
 
