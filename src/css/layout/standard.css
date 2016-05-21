@@ -33,6 +33,16 @@ ds-bar {
 		padding-left: var(--line-height-half);
 		padding-right: var(--line-height-half);
 	}
+
+	&.\+split {
+		display: flex;
+		height: var(--line-height-x2);
+		align-items: center;
+
+		> :first-child {
+			flex: 1;
+		}
+	}
 }
 
 ds-area {
