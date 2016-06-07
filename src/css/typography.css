@@ -59,6 +59,10 @@ pre {
 	font-size: 14px;
 	background: #efefef;
 	padding: 0 var(--line-height-half);
+
+	&.\+wrap, &.\+wrap-all {
+		white-space: pre-wrap;
+	}
 }
 ul ul, ol ol, ul ol, ol ul {
 	margin-top: 0;
@@ -102,4 +106,12 @@ a {
 	:--colored-dark & {
 		color: #fff;
 	}
+}
+
+.\+wrap-all {
+	word-break: break-all;
+}
+
+.\+no-wrap {
+	white-space: nowrap;
 }
