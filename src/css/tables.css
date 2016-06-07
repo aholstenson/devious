@@ -13,14 +13,22 @@ thead {
 }
 
 th, td {
-	padding: 0 var(--line-height-half);
+	padding: var(--line-height-half) var(--line-height-half);
 
 	text-align: left;
-	line-height: var(--line-height-x2);
+	line-height: var(--line-height);
 }
 
 th {
 	font-family: var(--heading-font-family);
 	font-weight: 400;
 	font-style: inherit;
+}
+
+table.\+compact {
+	font-size: 12px;
+}
+
+table.\+stripe > tbody > tr:nth-child(2n) > td {
+	background-color: rgba(0, 0, 0, 0.1);
 }
