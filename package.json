@@ -22,7 +22,7 @@
       "lib": "src/js"
     },
     "dependencies": {
-      "mara": "npm:mara@0.1.0"
+      "mara": "npm:mara@0.1.1"
     },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9"
