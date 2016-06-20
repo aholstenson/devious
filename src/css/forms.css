@@ -45,7 +45,7 @@ ds-form-control {
 
 	&.ml-changed:invalid, &.ml-input-error:not(.ml-changed) {
 		border-color: var(--input-border-invalid);
-		background-color: var(--input-background-invalid);
+		/*background-color: var(--input-background-invalid)*/;
 
 		&:focus {
 			border-color: color(var(--input-border-invalid) shade(40%));
@@ -67,4 +67,12 @@ textarea {
 
 input::-webkit-datetime-edit-fields-wrapper {
 	padding: 0;
+}
+
+input::placeholder {
+	color: var(--input-placeholder);
+
+	:--colored-dark & {
+		color: var(--input-placeholder-light);
+	}
 }
