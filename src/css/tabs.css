@@ -22,12 +22,20 @@
 				transition: border-color 150ms ease-in;
 
 				&:hover {
-					border-color: #888;
+					border-color: var(--border-dark);
+
+					:--colored-dark & {
+						border-color: var(--border-light);
+					}
 				}
 			}
 
 			&[data-selected] > a {
-				border-color: #444;
+				border-color: var(--border-darker);
+
+				:--colored-dark & {
+					border-color: var(--border-lighter);
+				}
 			}
 		}
 	}
