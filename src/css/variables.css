@@ -38,6 +38,9 @@
 	--input-bg: #fff;
 	--input-fg: #222;
 
+	--input-placeholder: rgba(0, 0, 0, 0.5);
+	--input-placeholder-light: rgba(255, 255, 255, 0.5);
+
 	--input-border-radius: 3px;
 	--input-border-normal: var(--border-dark);
 	--input-border-focus: var(--border-darker);
