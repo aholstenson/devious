@@ -1,6 +1,10 @@
 form {
 	margin: 0;
 	margin-bottom: var(--line-height);
+
+	ds-area > &:last-child {
+		margin-bottom: 0;
+	}
 }
 
 ds-form-control {

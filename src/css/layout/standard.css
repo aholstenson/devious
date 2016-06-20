@@ -63,4 +63,8 @@ ds-area {
 			margin-top: 0;
 		}
 	}
+
+	> ds-area:first-child {
+		margin-top: 0;
+	}
 }
