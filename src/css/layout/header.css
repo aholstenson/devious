@@ -3,8 +3,6 @@
  */
 
 .navbar {
-	display: flex;
-	align-content: center;
 	z-index: 1000;
 
 	padding: 0 var(--line-height);
@@ -12,23 +10,42 @@
 	background: var(--header-bg);
 	color: var(--header-fg);
 
-	> :nth-child(n+2) {
-		margin-left: var(--line-height);
+	@media (--medium-and-up) {
+		display: flex;
+		align-content: center;
+
+		> :nth-child(n+2) {
+			margin-left: var(--line-height);
+		}
 	}
 
 	&__title {
+		display: none;
+
 		font-family: var(--heading-font-family);
 		font-size: var(--h3-font-size);
 		line-height: var(--line-height-x2);
 
 		color: inherit;
 		text-decoration: none;
+
+		@media (--medium-and-up) {
+			display: block;
+		}
 	}
 
 	ul {
-		display: flex;
+		flex: 1;
+
 		margin: 0;
-		padding: 0;
+		padding: var(--line-height-half) 0;
+
+		@media (--medium-and-up) {
+			padding: 0;
+
+			display: flex;
+			align-content: center;
+		}
 
 		> li {
 			display: inline;
@@ -42,12 +59,19 @@
 				color: var(--header-link-fg);
 				color: inherit;
 
-				border-bottom: 3px solid transparent;
+				border-left: 3px solid transparent;
 				transition: border-color 150ms ease-in;
 
 				line-height: calc(var(--line-height-x2) - 3px);
 
 				padding: 0 10px;
+
+				@media (--medium-and-up) {
+					display: inline-block;
+
+					border-left: 0;
+					border-bottom: 3px solid transparent;
+				}
 
 				&:hover {
 					border-color: var(--border-dark);
