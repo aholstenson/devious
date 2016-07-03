@@ -4,7 +4,7 @@
 	border-radius: 3px;
 	border: 2px solid #ccc;
 
-	line-height: calc(var(--line-height) * 1.5 - 3px);
+	line-height: calc(var(--line-height) * 1.5 - 4px);
 
 	&__current {
 		font-weight: bold;
