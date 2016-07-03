@@ -60,6 +60,10 @@ ds-form-control {
 		background: var(--input-bg);
 		color: var(--input-fg);
 	}
+select {
+	height: calc(var(--line-height) * 1.5);
+}
+
 }
 
 textarea {
