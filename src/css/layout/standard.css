@@ -7,15 +7,19 @@ ds-app {
 	}
 
 	&.\+sticky-navbar {
-		padding-top: var(--line-height-x2);
+		@media (--medium-and-up) {
+			padding-top: var(--line-height-x2);
+		}
 
-		> .navbar {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-
+		.app-navbar {
 			box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
+
+			@media (--medium-and-up) {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
 
 			&:not([class^="fill-"], [class*=" fill-"]) {
 				background: #fff;
@@ -42,6 +46,34 @@ ds-bar {
 		> :first-child {
 			flex: 1;
 		}
+	}
+}
+
+ds-app-nav {
+
+}
+
+ds-nav-selector {
+	display: block;
+
+	padding: var(--line-height-half);
+
+	text-align: right;
+
+	@media (--medium-and-up) {
+		display: none;
+	}
+}
+
+ds-nav-container {
+	display: none;
+
+	@media (--medium-and-up) {
+		display: block;
+	}
+
+	&.\+active {
+		display: block;
 	}
 }
 
