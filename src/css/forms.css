@@ -60,10 +60,35 @@ ds-form-control {
 		background: var(--input-bg);
 		color: var(--input-fg);
 	}
+
+	:--colored-dark & {
+		border: 2px solid var(--input-border-light-normal);
+
+		&[required] {
+			border-color: var(--input-border-light-required);
+		}
+
+		&:focus, &[focused] {
+			border-color: var(--input-border-light-focus);
+		}
+
+		&.ml-changed:invalid, &.ml-input-error:not(.ml-changed) {
+			border-color: var(--input-border-light-invalid);
+
+			&:focus {
+				border-color: color(var(--input-border-light-invalid) tint(40%));
+			}
+		}
+	}
+}
+
 select {
 	height: calc(var(--line-height) * 1.5);
 }
 
+option {
+	color: #333;
+	background: #fff;
 }
 
 textarea {
