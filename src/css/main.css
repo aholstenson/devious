@@ -29,10 +29,12 @@
 	;
 
 /* Media queries used throughout the CSS */
+@custom-media --small screen and (max-width: 699px);
 @custom-media --medium screen and (min-width: 700px) and (max-width: 1023px);
 @custom-media --medium-and-up screen and (min-width: 700px);
-@custom-media --large screen and (min-width: 1024px);
-@custom-media --extra-large screen and (min-width: 1480px);
+@custom-media --large screen and (min-width: 1024px) and (max-width: 1479px);
+@custom-media --large-and-up screen and (min-width: 1024px);
+@custom-media --extra-large-and-up screen and (min-width: 1480px);
 
 @import "typography.css";
 
