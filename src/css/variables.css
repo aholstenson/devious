@@ -47,6 +47,11 @@
 	--input-border-required: var(--input-border-normal);
 	--input-border-invalid: #faa;
 
+	--input-border-light-normal: var(--border-light);
+	--input-border-light-focus: var(--border-lighter);
+	--input-border-light-required: var(--input-border-light-normal);
+	--input-border-light-invalid: color(#f00 alpha(0.5));
+
 	--input-background-invalid: #fee;
 	--input-addon-background: #fff;
 	--input-addon-color: #555;
