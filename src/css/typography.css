@@ -56,7 +56,7 @@ p, ul, ol, pre, table, blockquote {
 	}
 }
 pre {
-	font-size: 14px;
+	font-size: var(--pre-font-size);
 	background: #efefef;
 	padding: 0 var(--line-height-half);
 
