@@ -7,6 +7,10 @@ form {
 	}
 }
 
+mara-form {
+	display: block;
+}
+
 ds-form-control {
 	display: block;
 	padding-bottom: calc(var(--line-height-half) / 2);
