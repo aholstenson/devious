@@ -17,11 +17,11 @@
 		}
 
 		&[data-grid-size~=s-full] {
-			flex: 0 0 100%;
+			width: 100%;
 		}
 
 		&[data-grid-size~=s-1of2], &[data-grid-size~=s-2of4] {
-			flex: 0 0 50%;
+			width: 50%;
 		}
 
 		&[data-grid-size~=s-1of3] {
@@ -51,6 +51,7 @@
 
 			&[data-grid-size~="1of2"], &[data-grid-size~="2of4"] {
 				flex: 0 0 50%;
+				width: 50%;
 			}
 
 			&[data-grid-size~="1of3"] {
