@@ -10,7 +10,7 @@ var colors = require('./colors.json');
 var allKeys = [];
 var darkKeys = [];
 
-function outputColor(name, color) {
+function outputFillColor(name, color) {
 	color = cm(color);
 	var text = color.light() ? '#000' : '#fff';
 
@@ -23,17 +23,30 @@ function outputColor(name, color) {
 	console.log(style);
 }
 
+function outputColor(name, color) {
+	color = cm(color);
+	let style = name  + ' { color: ' + color.hexString() + '; }';
+	console.log(style);
+}
+
 Object.keys(colors).forEach(function(c) {
 	if(typeof colors[c] != 'object') {
-		outputColor('.fill-' + c, colors[c]);
+		outputFillColor('.fill-' + c, colors[c]);
+		outputColor('.' + c, colors[c]);
 	} else {
 		Object.keys(colors[c]).forEach(function(v) {
-			var selector = '.fill-' + c + '-' + v;
+			var fill = '.fill-' + c + '-' + v;
 			if(v == '500') {
-				selector += ', .fill-' + c;
+				fill += ', .fill-' + c;
 			}
 
-			outputColor(selector, colors[c][v]);
+			var normal = '.' + c + '-' + v;
+			if(v == '500') {
+				fill += ', .' + c;
+			}
+
+			outputFillColor(fill, colors[c][v]);
+			outputColor(normal, colors[c][v]);
 		});
 	}
 });
