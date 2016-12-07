@@ -1,6 +1,6 @@
 {
   "name": "devious",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "CSS and JS for lazy webapps.",
   "license": "MIT",
   "devDependencies": {
