@@ -104,7 +104,7 @@ SystemJS.config({
     "fs": "npm:jspm-nodelibs-fs@0.2.0",
     "http": "npm:jspm-nodelibs-http@0.2.0",
     "https": "npm:jspm-nodelibs-https@0.2.1",
-    "mara": "npm:mara@0.1.1",
+    "mara": "npm:mara@0.1.4",
     "module": "npm:jspm-nodelibs-module@0.2.0",
     "net": "npm:jspm-nodelibs-net@0.2.0",
     "os": "npm:jspm-nodelibs-os@0.2.0",
@@ -136,16 +136,6 @@ SystemJS.config({
         "base64-js": "npm:base64-js@1.2.0",
         "ieee754": "npm:ieee754@1.1.8",
         "isarray": "npm:isarray@1.0.0"
-      }
-    },
-    "npm:mara@0.1.1": {
-      "map": {
-        "ally.js": "npm:ally.js@1.4.0",
-        "document-register-element": "npm:document-register-element@0.3.0",
-        "dom4": "npm:dom4@1.8.3",
-        "dom4-elements": "npm:dom4-elements@0.0.2",
-        "lodash": "npm:lodash@3.10.1",
-        "sortablejs": "npm:sortablejs@1.4.2"
       }
     },
     "npm:envify@3.4.0": {
@@ -409,6 +399,16 @@ SystemJS.config({
     "npm:jspm-nodelibs-zlib@0.2.2": {
       "map": {
         "browserify-zlib": "npm:browserify-zlib@0.1.4"
+      }
+    },
+    "npm:mara@0.1.4": {
+      "map": {
+        "ally.js": "npm:ally.js@1.4.0",
+        "document-register-element": "npm:document-register-element@0.3.0",
+        "dom4-elements": "npm:dom4-elements@0.0.2",
+        "dom4": "npm:dom4@1.8.3",
+        "sortablejs": "npm:sortablejs@1.4.2",
+        "lodash": "npm:lodash@3.10.1"
       }
     }
   }
