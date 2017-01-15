@@ -1,6 +1,6 @@
 {
   "name": "devious",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "CSS and JS for lazy webapps.",
   "license": "MIT",
   "devDependencies": {
@@ -22,7 +22,7 @@
       "lib": "src/js"
     },
     "dependencies": {
-      "mara": "npm:mara@0.1.1"
+      "mara": "npm:mara@0.1.4"
     },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9"
