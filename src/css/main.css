@@ -5,6 +5,24 @@
 
 @import "normalize.css";
 
+@import "typography.css";
+
+@import "buttons.css";
+@import "forms.css";
+@import "tables.css";
+
+@import "breadcrumbs.css";
+@import "tabs.css";
+@import "pagination.css";
+
+@import "layout/standard.css";
+@import "layout/header.css";
+
+@import "layout/grid.css";
+
+/* Import colors last to give them a chance to override other styles */
+@import "colors.css";
+
 /* Selector for custom focus */
 @custom-selector :--focused :focus, [focused];
 
@@ -35,21 +53,3 @@
 @custom-media --large screen and (min-width: 1024px) and (max-width: 1479px);
 @custom-media --large-and-up screen and (min-width: 1024px);
 @custom-media --extra-large-and-up screen and (min-width: 1480px);
-
-@import "typography.css";
-
-@import "buttons.css";
-@import "forms.css";
-@import "tables.css";
-
-@import "breadcrumbs.css";
-@import "tabs.css";
-@import "pagination.css";
-
-@import "layout/standard.css";
-@import "layout/header.css";
-
-@import "layout/grid.css";
-
-/* Import colors last to give them a chance to override other styles */
-@import "colors.css";
