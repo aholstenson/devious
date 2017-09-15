@@ -1,10 +1,12 @@
 'use strict';
 
-import ce from 'mara/ce';
+import { HTMLCustomElement, InitialRender, define } from 'mara/ce';
 
-ce.define('ds-nav-selector', function(def) {
+define('ds-nav-selector', class NavSelector extends HTMLCustomElement.with(InitialRender) {
 
-	def.createdCallback = function() {
+	initialRenderCallback() {
+		super.initialRenderCallback();
+
 		this.setAttribute('role', 'button');
 
 		this.addEventListener('click', function(e) {
@@ -24,6 +26,6 @@ ce.define('ds-nav-selector', function(def) {
 				container.classList.add('+active');
 			}
 		});
-	};
+	}
 
 });
