@@ -1,6 +1,6 @@
 {
   "name": "devious",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "CSS and JS for lazy webapps.",
   "license": "MIT",
   "devDependencies": {
@@ -14,8 +14,8 @@
   "main": "src/js/main.js",
   "dependencies": {
     "normalize.css": "^3.0.3",
-    "mara": "^0.2.0",
-    "mara-navigation": "^0.2.0",
-    "mara-forms": "^0.2.0"
+    "mara": "^0.3.0",
+    "mara-navigation": "^0.3.0",
+    "mara-forms": "^0.3.0"
   }
 }
