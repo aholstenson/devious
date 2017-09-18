@@ -81,8 +81,8 @@ ds-area {
 	display: block;
 
 	margin-top: var(--line-height);
-	margin-left: -var(--line-height-half);
-	margin-right: -var(--line-height-half);
+	margin-left: calc(- var(--line-height-half));
+	margin-right: calc(- var(--line-height-half));
 	padding: 0 var(--line-height-half);
 
 	&:--colored {
