@@ -3,8 +3,8 @@
 
 	flex-wrap: wrap;
 
-	margin-left: -calc(var(--line-height-half) / 2);
-	margin-right: -calc(var(--line-height-half) / 2);
+	margin-left: calc(- var(--line-height-half) / 2);
+	margin-right: calc(- var(--line-height-half) / 2);
 
 	> {
 		&* {
@@ -77,8 +77,8 @@
 	}
 
 	&.\+double-gutter {
-		margin-left: -calc(var(--line-height) / 2);
-		margin-right: -calc(var(--line-height) / 2);
+		margin-left: calc(- var(--line-height) / 2);
+		margin-right: calc(- var(--line-height) / 2);
 
 		> {
 			&* {
