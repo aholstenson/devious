@@ -46,12 +46,12 @@ ds-form-control {
 		border-color: var(--input-border-required);
 	}
 
-	&:focus, &[focused] {
+	&:--focused {
 		outline: none;
 		border-color: var(--input-border-focus);
 	}
 
-	&.ml-changed:invalid, &.ml-input-error:not(.ml-changed) {
+	&.mara-changed:invalid {
 		border-color: var(--input-border-invalid);
 		/*background-color: var(--input-background-invalid)*/;
 
@@ -72,11 +72,11 @@ ds-form-control {
 			border-color: var(--input-border-light-required);
 		}
 
-		&:focus, &[focused] {
+		&:--focused {
 			border-color: var(--input-border-light-focus);
 		}
 
-		&.ml-changed:invalid, &.ml-input-error:not(.ml-changed) {
+		&.mara-changed:invalid {
 			border-color: var(--input-border-light-invalid);
 
 			&:focus {
