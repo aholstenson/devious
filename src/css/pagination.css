@@ -2,12 +2,12 @@
 	display: inline-flex;
 
 	border-radius: 3px;
-	border: 2px solid #ccc;
+	border: 2px solid var(--border-dark);
 
 	line-height: calc(var(--line-height) * 1.5 - 4px);
 
 	&__current {
-		font-weight: bold;
+		background-color: var(--bg-dark);
 	}
 
 	&__divider:after {
@@ -15,6 +15,28 @@
 	}
 
 	> a, > span {
+		display: inline-block;
+
 		padding: 0 var(--line-height-half);
+
+		text-decoration: none;
+	}
+
+	> a {
+		&:hover {
+			background-color: var(--bg-dark);
+		}
+	}
+
+	> .pagination__disabled {
+		opacity: 0.6;
+	}
+
+	> .pagination__previous {
+		border-right: 1px solid var(--border-dark);
+	}
+
+	> .pagination__next {
+		border-left: 1px solid var(--border-dark);
 	}
 }
