@@ -42,6 +42,9 @@ ds-form-control {
 	border: 2px solid var(--input-border-normal);
 	border-radius: var(--input-border-radius);
 
+	will-change: border-color;
+	transition: border-color 200ms ease-out;
+
 	&[required] {
 		border-color: var(--input-border-required);
 	}
