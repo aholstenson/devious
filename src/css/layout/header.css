@@ -76,7 +76,7 @@
 				&:hover {
 					border-color: var(--border-dark);
 
-					:--colored-dark & {
+					:--colored-dark& {
 						border-color: var(--border-light);
 					}
 				}
@@ -85,7 +85,7 @@
 			&[data-selected] > a {
 				border-color: var(--border-darker);
 
-				:--colored-dark & {
+				:--colored-dark& {
 					border-color: var(--border-lighter);
 				}
 			}

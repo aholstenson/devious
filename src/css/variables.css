@@ -8,7 +8,7 @@
 
 	--highlight-color-bg: rgba(0, 0, 0, 0.4);
 	--highlight-color-text: #000;
-	--light-highlight-color-bg: rgba(255, 255, 255, 0.15);
+	--light-highlight-color-bg: rgba(255, 255, 255, 0.6);
 	--light-highlight-color-text: #fff;
 
 	--bg-dark: rgba(0, 0, 0, 0.1);
@@ -16,8 +16,8 @@
 
 	--border-dark: rgba(0, 0, 0, 0.25);
 	--border-darker: rgba(0, 0, 0, 0.5);
-	--border-light: rgba(255, 255, 255, 0.25);
-	--border-lighter: rgba(255, 255, 255, 0.5);
+	--border-light: rgba(255, 255, 255, 0.4);
+	--border-lighter: rgba(255, 255, 255, 0.7);
 
 	/* Basic typography */
 	--line-height: 1.5625rem;
