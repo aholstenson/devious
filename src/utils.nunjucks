@@ -1,6 +1,0 @@
-{% macro pattern(title) %}
-<div class="pattern">
-	<h3 class="h4">{{ title }}</h3>
-	{{ caller() }}
-</div>
-{% endmacro %}

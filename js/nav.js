@@ -1,6 +1,6 @@
 'use strict';
 
-import { HTMLCustomElement, InitialRender, define } from 'mara/ce';
+import { HTMLCustomElement, InitialRender, define } from 'mara';
 
 define('ds-nav-selector', class NavSelector extends HTMLCustomElement.with(InitialRender) {
 
