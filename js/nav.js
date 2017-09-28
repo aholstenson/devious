@@ -12,7 +12,7 @@ define('ds-nav-selector', class NavSelector extends HTMLCustomElement.with(Initi
 		this.addEventListener('click', function(e) {
 			e.preventDefault();
 
-			let container = document.query(this.getAttribute('for'));
+			let container = document.querySelector(this.getAttribute('for'));
 			if(! container) {
 				console.log('ERROR Could not find element matching', this.getAttribute('for'));
 				return;
